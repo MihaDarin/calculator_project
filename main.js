@@ -1,3 +1,10 @@
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) =>{
+    button.addEventListener('click', () =>{
+        console.log(button.id);
+    })
+})
 
 
 function sumNumbers(num1, num2){
@@ -23,4 +30,4 @@ function operate(num1, num2){
     return divideNumbers(num1, num2);
 }
 
-console.log(operate(4, 2));
+// console.log(operate(4, 2));
