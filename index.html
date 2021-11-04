@@ -8,23 +8,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="calculator">
-        <div class="numbers">
-            <button class="calcNum" id="0" value="0">0</button>
-            <button id=".">.</button>
-            <button id="=">=</button>
-            <button class="calcNum" id="1" value="1">1</button>
-            <button class="calcNum" id="2" value="2">2</button>
-            <button class="calcNum" id="3" value="3">3</button>
-            <button id="+">+</button>
-            <button class="calcNum" id="4" value="4">4</button>
-            <button class="calcNum" id="5" value="5">5</button>
-            <button class="calcNum" id="6" value="6">6</button>
-            <button id="-">-</button>
-            <button class="calcNum" id="7" value="7">7</button>
-            <button class="calcNum" id="8" value="8">8</button>
-            <button class="calcNum" id="9" value="9">9</button>
-            <button id="x">x</button>
+    <div class="container">
+        <div class="calculator">
+            <div class="numbers">
+                <button class="calc" id="1" value="1">1</button>
+                <button class="calc" id="2" value="2">2</button>
+                <button class="calc" id="3" value="3">3</button>
+                <button class="operator" id="+" value="+">+</button><br>
+                <button class="calc" id="4" value="4">4</button>
+                <button class="calc" id="5" value="5">5</button>
+                <button class="calc" id="6" value="6">6</button>
+                <button class="operator" id="-" value="-">-</button><br>
+                <button class="calc" id="7" value="7">7</button>
+                <button class="calc" id="8" value="8">8</button>
+                <button class="calc" id="9" value="9">9</button>
+                <button class="operator" id="x" value="x">x</button><br>
+                <button class="operator" id="c" value="c">c</button>
+                <button class="operator" id="." value=".">.</button>
+                <button class="calc" id="0" value="0">0</button>                
+                <button class="total" id="=" value="=">=</button>
+            </div>
+            <div id="result" class="result"></div>
         </div>
     </div>
     <script src="main.js"></script>
