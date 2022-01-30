@@ -1,36 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <div class="calculator">
-            <div class="numbers">
-                <button class="calc one" id="1" value="1">1</button>
-                <button class="calc two" id="2" value="2">2</button>
-                <button class="calc three" id="3" value="3">3</button>
-                <button class="operator plus" id="+" value="+">+</button><br>
-                <button class="calc" id="4" value="4">4</button>
-                <button class="calc" id="5" value="5">5</button>
-                <button class="calc" id="6" value="6">6</button>
-                <button class="operator" id="-" value="-">-</button><br>
-                <button class="calc" id="7" value="7">7</button>
-                <button class="calc" id="8" value="8">8</button>
-                <button class="calc" id="9" value="9">9</button>
-                <button class="operator" id="x" value="x">x</button><br>
-                <button class="operator" id="c" value="c">c</button>
-                <button class="operator" id="." value=".">.</button>
-                <button class="calc" id="0" value="0">0</button>                
-                <button class="total" id="=" value="=">=</button>
-            </div>
-            <div id="result" class="result"></div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="content">
+      <table>
+        <tr>
+          <td class="numItem" id="1">1</td>
+          <td class="numItem" id="2">2</td>
+          <td class="numItem" id="3">3</td>
+          <td class="operator +" id="+">+</td>
+        </tr>
+        <tr>
+          <td class="numItem" id="4">4</td>
+          <td class="numItem" id="5">5</td>
+          <td class="numItem" id="6">6</td>
+          <td class="operator" id="-">-</td>
+        </tr>
+        <tr>
+          <td class="numItem" id="7">7</td>
+          <td class="numItem" id="8">8</td>
+          <td class="numItem" id="9">9</td>
+          <td class="operator" id="*">*</td>
+        </tr>
+        <tr>
+          <td id="clear">C</td>
+          <td class="numItem" id="0">0</td>
+          <td class="operator" id="/">/</td>
+          <td id="equal">=</td>
+        </tr>
+        <tr>
+          <td class="preResult" id="preResult" colspan="4"></td>
+        </tr>
+        <tr>
+          <td class="result" colspan="4" id="result"></td>
+        </tr>
+      </table>
     </div>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
