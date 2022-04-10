@@ -1,63 +1,71 @@
-let operators = document.querySelectorAll(".operator");
-operators.forEach((item) => item.addEventListener("click", setOperator));
+//-----------------------------------------Numbers----------------------------------------//
 
 let numbers = document.querySelectorAll(".numItem");
 numbers.forEach((number) => number.addEventListener("click", setNumber));
 
-let preResult = document.getElementById("preResult");
-let result = document.getElementById("result");
-
-let equal = document.getElementById("equal");
-equal.addEventListener("click", operate);
-
-let clear = document.getElementById("clear");
-clear.addEventListener("click", clearArea);
+let currentNumber = document.getElementById("currentNumber");
 
 function setNumber() {
-  result.textContent += +this.id;
-  console.log(result.textContent);
+  calculationResult.textContent += +this.id;
 }
+
+//-----------------------------------------Operators----------------------------------------//
+
+let operators = document.querySelectorAll(".operator");
+operators.forEach((item) => item.addEventListener("click", setOperator));
 
 let operator;
 function setOperator() {
   operator = this.id;
-  preResult.textContent = result.textContent;
-  result.textContent = "";
-  console.log(operator);
+  currentNumber.textContent = calculationResult.textContent;
+  calculationResult.textContent = "";
 }
+
+//-----------------------------------------Operations----------------------------------------//
+
 function add() {
-  console.log(+preResult.textContent + +result.textContent);
-  result.textContent = +preResult.textContent + +result.textContent;
+  calculationResult.textContent =
+    +currentNumber.textContent + +calculationResult.textContent;
 }
 function substract() {
-  console.log(+preResult.textContent - +result.textContent);
-  result.textContent = +preResult.textContent - +result.textContent;
+  calculationResult.textContent =
+    +currentNumber.textContent - +calculationResult.textContent;
 }
 function multiply() {
-  console.log(+preResult.textContent * +result.textContent);
-  result.textContent = +preResult.textContent * +result.textContent;
+  calculationResult.textContent =
+    +currentNumber.textContent * +calculationResult.textContent;
 }
 function divide() {
-  console.log(+preResult.textContent / +result.textContent);
-  result.textContent = +preResult.textContent / +result.textContent;
+  calculationResult.textContent =
+    +currentNumber.textContent / +calculationResult.textContent;
 }
 function operate() {
-  if (operator == "+") {
+  if (operator === "+") {
     add();
-    preResult.textContent = result.textContent;
+    currentNumber.textContent = calculationResult.textContent;
   } else if (operator == "-") {
     substract();
-    preResult.textContent = result.textContent;
+    currentNumber.textContent = calculationResult.textContent;
   } else if (operator == "*") {
     multiply();
-    preResult.textContent = result.textContent;
+    currentNumber.textContent = calculationResult.textContent;
   } else if (operator == "/") {
     divide();
-    preResult.textContent = result.textContent;
+    currentNumber.textContent = calculationResult.textContent;
   }
 }
 
+//-----------------------------------------Result and Clear----------------------------------------//
+
+let equal = document.getElementById("equal");
+equal.addEventListener("click", operate);
+
+let calculationResult = document.getElementById("result");
+
+let clear = document.getElementById("clear");
+clear.addEventListener("click", clearArea);
+
 function clearArea() {
-  preResult.textContent = "";
-  result.textContent = "";
+  currentNumber.textContent = "";
+  calculationResult.textContent = "";
 }
